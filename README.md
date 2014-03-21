@@ -27,5 +27,5 @@ Digital is to write or read on digital pins on the Arduino
 Analog is to write or read on analog pins on the Arduino
 
 Mode is to change the mode on a pin. For example:
-  /mode/8/o sets pin number 8 as an output
-  /mode/8/i sets pin number 8 as an input
+  * /mode/8/o sets pin number 8 as an output
+  * /mode/8/i sets pin number 8 as an input
