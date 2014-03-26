@@ -14,6 +14,11 @@ It is also compatible with most CC3000 breakout boards, and was tested with the 
 
 The project has been tested with Chrome 33, Safari 7 and Firefox 27.
 
+## Requirements
+
+- [Adafruit CC3000 Library](https://github.com/adafruit/Adafruit_CC3000_Library)
+- [Adafruit MDNS Library](https://github.com/adafruit/CC3000_MDNS)
+
 ## Quick test
 
 1. Connect a LED & resistor to pin number 8 of your Arduino board
