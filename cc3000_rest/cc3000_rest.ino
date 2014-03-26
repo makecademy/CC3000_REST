@@ -90,7 +90,7 @@ void loop() {
     Serial.write(c);
         
     // Check if we are receveing useful data and process it
-    if (c == '/' & state_selected == false) {
+    if (c == '/' && state_selected == false) {
       
       // If the command is mode, and the pin is already selected    
       if (command == "mode" && pin_selected == true && state_selected == false) {
@@ -105,6 +105,7 @@ void loop() {
           pinMode(pin,INPUT);
               
           // Send feedback to client
+          send_http_headers(client);
           client.print(F("Setting pin D"));
           client.print(pin);
           client.print(F(" to "));
@@ -118,10 +119,11 @@ void loop() {
          pinMode(pin,OUTPUT);
               
          // Send feedback to client
+         send_http_headers(client);
          client.print(F("Setting pin D"));
          client.print(pin);
          client.print(F(" to "));
-         client.println("output");
+         client.print("output");
        }
        
        // Indicate that the state has been selected     
@@ -142,6 +144,7 @@ void loop() {
          value = digitalRead(pin);
           
          // Send feedback to client
+         send_http_headers(client);
          client.print(F("Reading from pin D"));
          client.print(pin);
          client.print(F(" is at "));
@@ -158,6 +161,7 @@ void loop() {
          digitalWrite(pin,value);
  
          // Send feedback to client
+         send_http_headers(client);
          client.print(F("Pin D"));
          client.print(pin);
          client.print(F(" set to "));
@@ -182,6 +186,7 @@ void loop() {
          value = analogRead(pin);
           
          // Send feedback to client
+         send_http_headers(client);
          client.print(F("Analog read from pin A"));
          client.print(pin);
          client.print(F(" is at "));
@@ -199,6 +204,7 @@ void loop() {
          analogWrite(pin,value);
  
          // Send feedback to client
+         send_http_headers(client);
          client.print(F("Pin D"));
          client.print(pin);
          client.print(F(" set to analog value "));
@@ -259,4 +265,11 @@ void loop() {
     
   }
  
+}
+
+void send_http_headers(Adafruit_CC3000_ClientRef client){
+  client.println("HTTP/1.1 200 OK");
+  client.println("Content-Type: text/html");
+  client.println("Connection: close");
+  client.println();
 }

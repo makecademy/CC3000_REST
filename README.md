@@ -8,7 +8,11 @@ A simple REST API for Arduino and the CC3000 WiFi chip. It allows to make REST c
 
 The library is at the moment compatible with the following Arduino boards: Uno, Mega, Due, Teensy 3.0.
 
-It is also compatible with most CC3000 breakout board, and was tested with the Adafruit CC3000 breakout board and CC3000 WiFi shield.
+It is also compatible with most CC3000 breakout boards, and was tested with the Adafruit CC3000 breakout board and CC3000 WiFi shield.
+
+## Supported browsers
+
+The library has been tested with Chrome 33, Safari 7 and Firefox 27.
 
 ## Quick test
 
