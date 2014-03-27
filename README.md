@@ -18,6 +18,10 @@ The project has been tested with Chrome 33, Safari 7 and Firefox 27.
 
 - [Adafruit CC3000 Library](https://github.com/adafruit/Adafruit_CC3000_Library)
 - [Adafruit MDNS Library](https://github.com/adafruit/CC3000_MDNS)
+- MDNS support in your operating system:
+  - For OS X it is supported through Bonjour, you don't have anything to install.
+  - For Linux, you need to install [Avahi](http://avahi.org/).
+  - For Windows, you need to install [Bonjour](http://www.apple.com/support/bonjour/).
 
 ## Quick test
 
