@@ -47,3 +47,9 @@ Analog is to write or read on analog pins on the Arduino. Note that you can only
 Mode is to change the mode on a pin. For example:
   * /mode/8/o sets pin number 8 as an output
   * /mode/8/i sets pin number 8 as an input
+
+## Troubleshooting
+
+In case you cannot access your Arduino board via the mDNS service (by typing arduino.local in your browser), you need to get the IP address of the board. Upload the sketch to the Arduino board, and then open the Serial monitor. The IP address of the board should be printed out. Simply copy it on a web browser, and you can make REST call like:
+
+192.168.1.104/digital/8/1
