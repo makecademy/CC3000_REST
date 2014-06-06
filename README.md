@@ -2,7 +2,7 @@
 
 ## Overview
 
-A simple REST API for Arduino and the CC3000 WiFi chip. It allows to make REST calls from a web browser or a webserver to control the pins of an Arduino board.
+A simple example of a REST API for Arduino and the CC3000 WiFi chip. It allows to make REST calls from a web browser or a webserver to control the pins of an Arduino board.
 
 ## Supported hardware
 
@@ -16,6 +16,7 @@ The project has been tested with Chrome 33, Safari 7 and Firefox 27.
 
 ## Requirements
 
+- [aREST Library](https://github.com/marcoschwartz/aREST)
 - [Adafruit CC3000 Library](https://github.com/adafruit/Adafruit_CC3000_Library)
 - [Adafruit MDNS Library](https://github.com/adafruit/CC3000_MDNS)
 - MDNS support in your operating system:
